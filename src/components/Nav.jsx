@@ -17,7 +17,7 @@ export default function Nav() {
           <Link tp="/react">React</Link>
         </li>
         <li>
-          <Liml to="/sanity">Sanity and headless CMS</Liml>
+          <Link to="/sanity">Sanity and headless CMS</Link>
         </li>
       </ul>
     </nav>

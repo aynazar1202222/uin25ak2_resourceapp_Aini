@@ -103,10 +103,11 @@ export default function Resources() {
           <h3>{resource.category}</h3>
           <p>{resource.text}</p>
           <ul>
-            {resource.sources}
-            <li>
-              <a hre={source.url}>{source.title}</a>
-            </li>
+            {resource.sources.map((source) => (
+              <li>
+                <a href={source.url}>{source.title}</a>
+              </li>
+            ))}
           </ul>
         </>
       ))}

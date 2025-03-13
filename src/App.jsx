@@ -1,6 +1,7 @@
-import { Routes } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import Resources from "./components/Resources";
+import "./styles/style.scss";
 
 function Layout() {
   return (
