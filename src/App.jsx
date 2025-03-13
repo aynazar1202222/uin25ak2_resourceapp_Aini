@@ -1,17 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
+import Nav from "./components/Nav";
 import Resources from "./components/Resources";
 
-function App() {
+function Layout() {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/:categorySlug" element={<Resources />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <div>
+      <Nav />
+      <Routes>
+        <Route path=":category" element={<Resources />} />
+      </Routes>
+    </div>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <Layout />
+    </Router>
+  );
+}
