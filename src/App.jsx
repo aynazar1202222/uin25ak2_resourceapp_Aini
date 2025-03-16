@@ -1,23 +1,28 @@
+import Layout from "./components/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav";
 import Resources from "./components/Resources";
 import "./styles/style.scss";
-
-function Layout() {
-  return (
-    <div>
-      <Nav />
-      <Routes>
-        <Route path=":category" element={<Resources />} />
-      </Routes>
-    </div>
-  );
-}
 
 export default function App() {
   return (
     <Router>
-      <Layout />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Resources category="html" />} />{" "}
+          {/*Med en gang man går inn i side så er det HTML ressurser*/}
+          <Route path="/html" element={<Resources category="html" />} />
+          <Route path="/css" element={<Resources category="css" />} />
+          <Route
+            path="/javascript"
+            element={<Resources category="javascript" />}
+          />
+          <Route path="/react" element={<Resources category="react" />} />
+          <Route
+            path="/headless-cms"
+            element={<Resources category="headless-cms" />}
+          />
+        </Routes>
+      </Layout>
     </Router>
   );
 }

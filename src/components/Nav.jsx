@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+//Denne nav components innholder en liste med lenker der lenkene peker til en side som titlen
 export default function Nav() {
   return (
     <nav>
@@ -14,10 +15,10 @@ export default function Nav() {
           <Link to="/javascript">JavaScript</Link>
         </li>
         <li>
-          <Link tp="/react">React</Link>
+          <Link to="/react">React</Link>
         </li>
         <li>
-          <Link to="/sanity">Sanity and headless CMS</Link>
+          <Link to="/headless-cms">Headless-CMS</Link>
         </li>
       </ul>
     </nav>
